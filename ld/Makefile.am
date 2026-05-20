@@ -281,6 +281,7 @@ ALL_EMULATION_SOURCES = \
 	eelf_i386_haiku.c \
 	eelf_i386_sol2.c \
 	eelf_i386_vxworks.c \
+	eelf_i386_reddyos.c \
 	eelf_iamcu.c \
 	eelf_s390.c \
 	eh8300elf.c \
@@ -458,6 +459,7 @@ ALL_64_EMULATION_SOURCES = \
 	eelf_x86_64_fbsd.c \
 	eelf_x86_64_haiku.c \
 	eelf_x86_64_sol2.c \
+	eelf_x86_64_reddyos.c \
 	ehppa64linux.c \
 	ei386pep.c \
 	emmo.c

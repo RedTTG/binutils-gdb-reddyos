@@ -2017,6 +2017,7 @@ case $os in
 	| genode* \
 	| glidix* \
 	| gnu* \
+	| reddyos* \
 	| go32* \
 	| haiku* \
 	| hcos* \

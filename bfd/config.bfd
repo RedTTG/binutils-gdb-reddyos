@@ -348,6 +348,11 @@ case "${targ}" in
     targ_selvecs=alpha_vms_lib_txt_vec
     want64=true
     ;;
+    x86_64-*-reddyos*)
+    targ_defvec=bfd_elf64_x86_64_vec
+    targ_selvecs=bfd_elf32_i386_vec
+    want64=true
+    ;;
 #endif /* BFD64 */
 
   am33_2.0-*-linux*)

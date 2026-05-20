@@ -82,6 +82,15 @@ fi
 # Please try to keep this table more or less in alphabetic order - it
 # makes it much easier to lookup a specific archictecture.
 case "${targ}" in
+i[3-7]86-*-reddyos*)
+			targ_emul=elf_i386_reddyos
+			targ_extra_emuls=elf_i386
+			targ64_extra_emuls="elf_x86_64_reddyos elf_x86_64"
+			;;
+x86_64-*-reddyos*)
+			targ_emul=elf_x86_64_reddyos
+			targ_extra_emuls="elf_i386_reddyos elf_x86_64 elf_i386"
+			;;
 aarch64_be-*-elf)	targ_emul=aarch64elfb
 			targ_extra_emuls="aarch64elf aarch64elf32 aarch64elf32b armelfb armelf"
 			;;
@@ -1052,6 +1061,11 @@ case "${target}" in
 *-*-dragonfly*)
   NATIVE_LIB_DIRS='/lib /usr/lib /usr/pkg/lib /usr/local/lib'
   ;;
+
+*-*-reddyos*)
+  NATIVE_LIB_DIRS='/lib /local/lib'
+  ;;
+
 
 *-*-freebsd*)
   NATIVE_LIB_DIRS='/lib /usr/lib /usr/local/lib /usr/lib32'
